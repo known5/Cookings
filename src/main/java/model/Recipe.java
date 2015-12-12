@@ -33,7 +33,7 @@ public class Recipe {
 	
 	public void removeIngredient(int argument) {
 		for (Ingredient entry : requiredIngredients) {
-			if (entry.ingredientID == argument) {
+			if (entry.getIngredientID() == argument) {
 				requiredIngredients.remove(entry);
 				break;
 			}
@@ -50,7 +50,7 @@ public class Recipe {
 	
 	public void removeTool(int argument) {
 		for (Tool entry : toolSet) {
-			if (entry.toolID == argument) {
+			if (entry.getToolID() == argument) {
 				toolSet.remove(entry);
 				break;
 			}
@@ -67,7 +67,7 @@ public class Recipe {
 	
 	public void removeStep(int IDArg) {
 		for (int i = 0; i < stepSequence.length; i++) {
-			if (stepSequence[i].stepID == IDArg) {
+			if (stepSequence[i].getStepID() == IDArg) {
 				stepSequence[i] = null;
 				print("Step: " + Integer.toString(IDArg) + " removed");
 				break;
@@ -85,7 +85,7 @@ public class Recipe {
 	
 	public void removeComponent(int argument) {
 		for (Component entry : requiredComponents) {
-			if (argument == entry.componentID) {
+			if (argument == entry.getComponentID()) {
 				requiredComponents.remove(entry);
 				break;
 			}

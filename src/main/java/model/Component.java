@@ -12,10 +12,10 @@ public class Component {
 	/**
 	 * Class variables.
 	 */
-	public int componentID;
-	public String componentName;
-	public String type;
-	public Set<Ingredient> requirementsList;
+	private int componentID;
+	private String componentName;
+	private Set<Ingredient> requirementsList;
+	private Hint hint;
 	
 	/**
 	 * Class constructor, creates a component Instance which you can add required ingredients to.
@@ -24,10 +24,9 @@ public class Component {
 	 * @param nameArg Component name.
 	 * @param typeArg Component Type.
 	 */
-	public Component(int IDArg, String nameArg, String typeArg) {
-		componentID = IDArg;
-		componentName = nameArg;
-		type = typeArg;
+	public Component(int IDArg, String nameArg) {
+		setComponentID(IDArg);
+		setComponentName(nameArg);
 	}
 
 	/**
@@ -62,6 +61,30 @@ public class Component {
 		} else {
 			System.out.println("You did not add a Stringvalue as parameter to the print function");
 		}
+	}
+
+	public Hint getHint() {
+		return hint;
+	}
+
+	public void setHint(Hint hintArg) {
+		hint = hintArg;
+	}
+
+	public String getComponentName() {
+		return componentName;
+	}
+
+	public void setComponentName(String componentName) {
+		this.componentName = componentName;
+	}
+
+	public int getComponentID() {
+		return componentID;
+	}
+
+	public void setComponentID(int componentID) {
+		this.componentID = componentID;
 	}
 
 }

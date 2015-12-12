@@ -10,8 +10,8 @@ public class Tool {
 	/**
 	 * Class variables
 	 */
-	public int toolID;
-	public String toolName;
+	private int toolID;
+	private String toolName;
 	
 	/**
 	 * Class constructor, creates a tool instance with an ID and a name.
@@ -20,7 +20,23 @@ public class Tool {
 	 * @param toolNameArg name of the tool
 	 */
 	public Tool(int toolIDArg, String toolNameArg) {
-		toolID = toolIDArg;
-		toolName = toolNameArg;
+		setToolID(toolIDArg);
+		setToolName(toolNameArg);
+	}
+
+	public int getToolID() {
+		return toolID;
+	}
+
+	public void setToolID(int toolID) {
+		this.toolID = toolID;
+	}
+
+	public String getToolName() {
+		return toolName;
+	}
+
+	public void setToolName(String toolName) {
+		this.toolName = toolName;
 	}
 }

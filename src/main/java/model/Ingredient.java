@@ -10,9 +10,9 @@ public class Ingredient {
 	/**
 	 * Class variables
 	 */
-	public int ingredientID;
-	public String ingredientName;
-	public String amountType;
+	private int ingredientID;
+	private String ingredientName;
+	private String amountType;
 	
 	/**
 	 * Class constructor.
@@ -23,10 +23,33 @@ public class Ingredient {
 	 */
 	public Ingredient(int IDArg, String nameArg, String typeArg) {
 		super();
-		ingredientID = IDArg;
-		ingredientName = nameArg;
-		amountType = typeArg;
+		setIngredientID(IDArg);
+		setIngredientName(nameArg);
+		setAmountType(typeArg);
 	}
-	
+
+	public int getIngredientID() {
+		return ingredientID;
+	}
+
+	public void setIngredientID(int ingredientID) {
+		this.ingredientID = ingredientID;
+	}
+
+	public String getIngredientName() {
+		return ingredientName;
+	}
+
+	public void setIngredientName(String ingredientName) {
+		this.ingredientName = ingredientName;
+	}
+
+	public String getAmountType() {
+		return amountType;
+	}
+
+	public void setAmountType(String amountType) {
+		this.amountType = amountType;
+	}
 	
 }
