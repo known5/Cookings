@@ -28,7 +28,7 @@ public class Step {
 	}
 	
 	public void setTime(double para) {
-		if (para < 0.0) {
+		if (para > 0.0) {
 			stepTime = para;
 		} else {
 			print("You cannot set the time to a negative");
