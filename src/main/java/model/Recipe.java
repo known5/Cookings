@@ -22,7 +22,55 @@ public class Recipe {
 		recipeID = recipeIDArg;
 		recipeName = recipeNameArg;
 	}
-	
+
+	public void setRecipeID(int id){
+		this.recipeID = id;
+	}
+
+	public int getRecipeID() {
+		return recipeID;
+	}
+
+	public void setRecipeName(String name){
+		this.recipeName = name;
+	}
+
+	public Step[] getStepSequence() {
+		return stepSequence;
+	}
+
+	public void setStepSequence(Step[] stepSequence) {
+		this.stepSequence = stepSequence;
+	}
+
+	public String getRecipeName() {
+		return recipeName;
+	}
+
+	public Set<Tool> getToolSet() {
+		return toolSet;
+	}
+
+	public void setToolSet(Set<Tool> toolSet) {
+		this.toolSet = toolSet;
+	}
+
+	public Set<Ingredient> getRequiredIngredients() {
+		return requiredIngredients;
+	}
+
+	public void setRequiredIngredients(Set<Ingredient> requiredIngredients) {
+		this.requiredIngredients = requiredIngredients;
+	}
+
+	public Set<Component> getRequiredComponents() {
+		return requiredComponents;
+	}
+
+	public void setRequiredComponents(Set<Component> requiredComponents) {
+		this.requiredComponents = requiredComponents;
+	}
+
 	public void addIngredient(Ingredient argument) {
 		if (requiredIngredients.contains(argument) && argument != null) {
 			print("Ingredient already added to the recipe");
