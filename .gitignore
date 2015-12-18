@@ -1,4 +1,4 @@
-/target/
 .idea/
 hci.iml
 *.class
+/.settings/*
