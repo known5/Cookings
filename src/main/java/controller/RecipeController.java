@@ -4,6 +4,7 @@ import model.*;
 import view.RecipeView;
 
 import java.lang.reflect.Array;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -17,8 +18,6 @@ public class RecipeController {
         this.model = model;
         this.view = view;
     }
-
-
 
     public void setRecipeID(int id) {
         model.setRecipeID(id);
@@ -36,17 +35,18 @@ public class RecipeController {
         return model.getRecipeName();
     }
 
-    public void setStepsequence(Step[] stepsequence){
+    public void setStepsequence(List<Step> stepsequence){
         model.setStepSequence(stepsequence);
     }
 
-    public Step[] getStepsequence() {
+    public List<Step> getStepsequence() {
         return model.getStepSequence();
     }
 
     public void setToolSet(Set<Tool> toolSet) {
         model.setToolSet(toolSet);
     }
+
     public Set<Tool> getToolSet() {
        return model.getToolSet();
     }
@@ -58,6 +58,8 @@ public class RecipeController {
     public Set<Ingredient> getIngredientSet() {
         return model.getRequiredIngredients();
     }
+
+
 
     public void updateView() {
 
