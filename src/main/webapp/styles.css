@@ -1,0 +1,156 @@
+@font-face {
+	font-family: 'Conv_Reef';
+	src: url('media/fonts/Reef.eot');
+	src: local('☺'), url('media/fonts/Reef.woff') format('woff'), url('media/fonts/Reef.ttf') format('truetype'), url('media/fonts/Reef.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+  font-family: 'Conv_Reef';
+  background-color: #8cd790;
+  background-image: url(media/img/pattern-single-transp.png);
+  font-size: 20px;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+.index-page {
+  background-image: url(media/img/intro-nobg.png), url(media/img/pattern-single-transp.png);
+  background-size: contain, auto;
+  background-repeat: no-repeat, repeat;
+  background-position: center, 0 0;
+}
+
+.index-image {
+  display: block;
+  margin: 20px auto;
+  width: 400px;
+  max-width: 90%;
+  height: auto;
+}
+
+.steps-page {
+  display: flex;
+}
+
+#main {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  position: relative;
+  height: 100vh;
+}
+#main h2 {
+  text-align: center;
+}
+
+#steps ul, #steps li {
+  list-style: none;
+}
+
+form ul {
+  padding-left: 0;
+}
+
+form li {
+  list-style: none;
+}
+
+form input, form label {
+  cursor: pointer;
+}
+
+#step-overview {
+  flex-grow: 0.3;
+  flex-shrink: 0;
+  flex-basis: 140px;
+  text-align: center;
+  overflow-y: scroll;
+  box-shadow: -5px 0 10px -2px rgba(0,0,0,0.4);
+}
+
+#steps {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#steps li {
+  background-color: #62B565;
+  padding: 40px 10px;
+  cursor: pointer;
+}
+
+#steps li.active {
+  background-color: #39943F;
+  cursor: default;
+  font-weight: bold;
+  box-shadow: 0 5px 10px -2px rgba(0,0,0,0.4) inset;
+}
+
+#steps li.done {
+  color: rgba(33,33,33,0.5);
+  text-decoration: line-through;
+}
+
+.card {
+  background-color: #39943F;
+  box-shadow: 0 5px 10px 2px rgba(0,0,0,0.4);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0 0 20px 0;
+}
+
+.card h1, .card h2, .card h3, .card h4 {
+  margin-top: 0;
+}
+
+.current-step-block {
+  position: relative;
+  width: 80%;
+  max-width: 50vh;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.current-step-block p, .current-step-block h2 {
+  padding: 0 20px 20px;
+}
+
+.current-step-image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 37.5%;
+}
+
+.current-step-image-wrapper::after {
+  position: absolute;
+  bottom: 0;
+  content: " ";
+  left: calc(50% - 30px);
+  border-bottom: 30px solid #39943F;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+}
+
+.current-step-image-wrapper {
+  position: relative;
+  max-width: 50vh;
+  margin: 0 auto 10px;
+}
+
+.alt {
+  padding: 0;
+}
+
+.jumbotron {
+  background: none;
+}
+
+@media all and (min-width: 800px) {
+
+}
