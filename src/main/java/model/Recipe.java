@@ -1,5 +1,6 @@
 package model;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Set;
 public class Recipe {
 	
 	public int recipeID;
-	public Step[] stepSequence;
+	public List<Step> stepSequence;
 	public String recipeName;
 	public Set<Tool> toolSet;
 	public Set<Ingredient> requiredIngredients;
@@ -35,11 +36,11 @@ public class Recipe {
 		this.recipeName = name;
 	}
 
-	public Step[] getStepSequence() {
+	public List<Step> getStepSequence() {
 		return stepSequence;
 	}
 
-	public void setStepSequence(Step[] stepSequence) {
+	public void setStepSequence(List<Step> stepSequence) {
 		this.stepSequence = stepSequence;
 	}
 
@@ -107,16 +108,16 @@ public class Recipe {
 	
 	public void addStep(Step argument) {
 		if (argument != null) {
-			stepSequence[stepSequence.length] = argument;
+			stepSequence.add(argument);
 		} else {
 			print("You can only add steps.");
 		}
 	}
 	
 	public void removeStep(int IDArg) {
-		for (int i = 0; i < stepSequence.length; i++) {
-			if (stepSequence[i].getStepID() == IDArg) {
-				stepSequence[i] = null;
+		for (int i = 0; i < stepSequence.size(); i++) {
+			if ((stepSequence.get(i)).getStepID() == IDArg) {
+				stepSequence.add(i, null);
 				print("Step: " + Integer.toString(IDArg) + " removed");
 				break;
 			}
