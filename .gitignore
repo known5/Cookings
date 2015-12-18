@@ -3,3 +3,4 @@
 hci.iml
 IntelliLang.xml
 colors.scheme.xml
+.settings/.*
